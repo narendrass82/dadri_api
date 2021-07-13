@@ -1,5 +1,7 @@
 using dadri_api.Configurations;
 using dadri_api.Data;
+using dadri_api.IRepository;
+using dadri_api.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -42,12 +44,15 @@ namespace dadri_api
                 .AllowAnyHeader())
             );
             services.AddAutoMapper(typeof(MapperInitializer));// added to mapping data to dto mapping and reverse
+            services.AddTransient<IUnitOfWork, UnitOfWork>();// this is device verytime freshh copy of IunitOfWork
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1", Description="NTPC Dadri IT Api"});
             });
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(
+                options=>
+                options.SerializerSettings.ReferenceLoopHandling= Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
