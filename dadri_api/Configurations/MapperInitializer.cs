@@ -16,6 +16,10 @@ namespace dadri_api.Configurations
             CreateMap<Country, CreateCountryDTO>().ReverseMap();
             CreateMap<Hotel, HotelDTO>().ReverseMap();
             CreateMap<Hotel, CreateHotelDTO>().ReverseMap();
+            CreateMap<UserRegister, UserRegisterDTO>().ReverseMap();
+            CreateMap<UserRegister,UserRegisterCreateDTO>().ReverseMap();            
+            CreateMap<ApiUser, UserDTO>().ReverseMap();
+            CreateMap<UsersApproveResgister, UsersApproveResgisterDTO>().ReverseMap();
         }
     }
 }

@@ -3,344 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dadri_api.Data;
 
 namespace dadri_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210731131132_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "181c5a2d-514c-4cf6-8b0f-24bcbfd24403",
-                            ConcurrencyStamp = "964db67e-5d5c-4eaa-a1a7-86fd5b30eafd",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        },
-                        new
-                        {
-                            Id = "8490a035-9b6c-400d-8a26-38714b9f889c",
-                            ConcurrencyStamp = "b98f4360-f58e-4464-a0e6-18dfa8478844",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        },
-                        new
-                        {
-                            Id = "eb8c7299-9ff5-418d-91fc-d86df9b6cfab",
-                            ConcurrencyStamp = "779202a9-e0c7-4637-941b-dd589b7f2e6b",
-                            Name = "Sas",
-                            NormalizedName = "SAS"
-                        },
-                        new
-                        {
-                            Id = "d5634682-059f-44d1-8ba7-808da33e1bca",
-                            ConcurrencyStamp = "2f62299c-1b44-4905-968d-50ed90a27d4d",
-                            Name = "SasAdmin",
-                            NormalizedName = "SASADMIN"
-                        },
-                        new
-                        {
-                            Id = "0f84f316-f393-48fb-b99a-33c02a04bc24",
-                            ConcurrencyStamp = "385ddb28-be2a-4153-9da9-b75c69d4f6c7",
-                            Name = "Welfare",
-                            NormalizedName = "WELFARE"
-                        },
-                        new
-                        {
-                            Id = "0a692dd4-702f-42e0-96e8-464822e7f224",
-                            ConcurrencyStamp = "d2c3f4e0-c004-4939-9dfb-834c942514e4",
-                            Name = "WelfareNtpcClub",
-                            NormalizedName = "WELFARENTPCCLUB"
-                        },
-                        new
-                        {
-                            Id = "3ed1fca2-ea3c-44e4-a952-18f0d5bc70af",
-                            ConcurrencyStamp = "c1270c01-48b1-45e5-a618-22940d2cf545",
-                            Name = "WelfareNtpcClubAdmin",
-                            NormalizedName = "WELFARENTPCCLUBADMIN"
-                        },
-                        new
-                        {
-                            Id = "0a523944-ab6f-4636-88bf-5cf927a13843",
-                            ConcurrencyStamp = "98c16781-89f7-4ed7-8dfa-4c44d6017d0e",
-                            Name = "WelfareVrc",
-                            NormalizedName = "WELFAREVRC"
-                        },
-                        new
-                        {
-                            Id = "4536acd7-efd1-475f-963c-837268b0d3f7",
-                            ConcurrencyStamp = "10aaba34-2797-4663-9588-8d4b1888e952",
-                            Name = "WelfareVrcAdmin",
-                            NormalizedName = "WELFAREVRCADMIN"
-                        },
-                        new
-                        {
-                            Id = "9a9fa3c8-274d-483e-ae66-7968a783bf28",
-                            ConcurrencyStamp = "d97990e7-2dd9-4cbb-922c-6e0065910851",
-                            Name = "Bus",
-                            NormalizedName = "BUS"
-                        },
-                        new
-                        {
-                            Id = "93591552-28d0-4b96-be38-a38023e91dd1",
-                            ConcurrencyStamp = "6049ad68-17b7-40ce-9375-61a8a2deff3e",
-                            Name = "BusConductor",
-                            NormalizedName = "BUSCONDUCTOR"
-                        },
-                        new
-                        {
-                            Id = "e4791609-aa87-4cfd-9391-d36f5a3b14ce",
-                            ConcurrencyStamp = "17f5277a-10de-4284-9668-80318d46f0c9",
-                            Name = "BusWallet",
-                            NormalizedName = "BUSWALLET"
-                        },
-                        new
-                        {
-                            Id = "7e5ceeb8-262a-4250-8075-e233ce1ac71d",
-                            ConcurrencyStamp = "8db7e235-6a39-435f-b4a8-825c8151115c",
-                            Name = "BusWalletAdmin",
-                            NormalizedName = "BUSWALLETADMIN"
-                        },
-                        new
-                        {
-                            Id = "3114da27-d4a6-45e0-b873-28d5cc984c0d",
-                            ConcurrencyStamp = "7723cb33-fb8a-4e1c-91b4-a878741b2ff0",
-                            Name = "HospitalAdmin",
-                            NormalizedName = "HOSPITALADMIN"
-                        },
-                        new
-                        {
-                            Id = "3cfb23ae-3cb6-4f11-8ede-75aa2708c630",
-                            ConcurrencyStamp = "adae60c4-acba-4cf5-88df-24c60e837a92",
-                            Name = "Movie",
-                            NormalizedName = "MOVIE"
-                        },
-                        new
-                        {
-                            Id = "5f0bd33a-b95d-4610-87e4-5a7151e90e3c",
-                            ConcurrencyStamp = "27230a3b-254f-43be-87d5-f57110cd347a",
-                            Name = "MovieAdmin",
-                            NormalizedName = "MOVIEADMIN"
-                        },
-                        new
-                        {
-                            Id = "3ed16947-a1b3-4c0a-ae2c-446a0de1e767",
-                            ConcurrencyStamp = "61e4a40d-0517-4872-b6f2-d28fce7518e0",
-                            Name = "Dsm",
-                            NormalizedName = "DSM"
-                        });
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetRoleClaims");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserClaims");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
-                {
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("LoginProvider", "ProviderKey");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserLogins");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetUserRoles");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId", "LoginProvider", "Name");
-
-                    b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("dadri_api.Data.ApiUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers");
-                });
 
             modelBuilder.Entity("dadri_api.Data.Country", b =>
                 {
@@ -711,13 +390,13 @@ namespace dadri_api.Migrations
                         .IsUnique()
                         .HasFilter("[Mobile] IS NOT NULL");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
                             UserId = 1,
-                            ApprovalDate = new DateTime(2021, 8, 4, 5, 48, 24, 166, DateTimeKind.Local).AddTicks(7515),
+                            ApprovalDate = new DateTime(2021, 7, 31, 18, 41, 31, 977, DateTimeKind.Local).AddTicks(5744),
                             ApprovedBy = "009392",
                             DOB = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DeptId = 0,
@@ -738,7 +417,7 @@ namespace dadri_api.Migrations
                             ProjectJoining = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuarterId = 0,
                             QuarterId2 = 0,
-                            RegistratinDate = new DateTime(2021, 8, 4, 5, 48, 24, 166, DateTimeKind.Local).AddTicks(9172),
+                            RegistratinDate = new DateTime(2021, 7, 31, 18, 41, 31, 977, DateTimeKind.Local).AddTicks(7447),
                             TypeId = 0
                         });
                 });
@@ -929,7 +608,7 @@ namespace dadri_api.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("UserLogin");
+                    b.ToTable("UserLogins");
                 });
 
             modelBuilder.Entity("dadri_api.Data.UserPersonalArea", b =>
@@ -1040,7 +719,7 @@ namespace dadri_api.Migrations
                         new
                         {
                             RegisterId = 1,
-                            ApprovalDate = new DateTime(2021, 8, 4, 5, 48, 24, 165, DateTimeKind.Local).AddTicks(2771),
+                            ApprovalDate = new DateTime(2021, 7, 31, 18, 41, 31, 975, DateTimeKind.Local).AddTicks(9905),
                             ApprovedBy = "009392",
                             Email = "narendrasingh@ntpc.co.in",
                             EmployerId = 1,
@@ -1049,7 +728,7 @@ namespace dadri_api.Migrations
                             LastName = "Singh",
                             Mobile = "8527500155",
                             ProjectId = 0,
-                            RegistratinDate = new DateTime(2021, 8, 4, 5, 48, 24, 166, DateTimeKind.Local).AddTicks(5683)
+                            RegistratinDate = new DateTime(2021, 7, 31, 18, 41, 31, 977, DateTimeKind.Local).AddTicks(3882)
                         });
                 });
 
@@ -1069,58 +748,7 @@ namespace dadri_api.Migrations
                     b.HasIndex("UserId", "URoleId")
                         .IsUnique();
 
-                    b.ToTable("UserRole");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.HasOne("dadri_api.Data.ApiUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
-                {
-                    b.HasOne("dadri_api.Data.ApiUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("dadri_api.Data.ApiUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
-                {
-                    b.HasOne("dadri_api.Data.ApiUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.ToTable("UserRoles");
                 });
 
             modelBuilder.Entity("dadri_api.Data.Hotel", b =>
