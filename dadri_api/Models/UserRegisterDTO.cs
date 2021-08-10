@@ -15,6 +15,7 @@ namespace dadri_api.Models
     }
     public class UserRegisterCreateDTO
     {
+        public string EmpNo { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         [StringLength(maximumLength: 100, MinimumLength = 5, ErrorMessage = "Value lenght must be 5 to 100")]

@@ -39,13 +39,16 @@ namespace dadri_api
             {
                 o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultScheme= JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(b =>
             {
+                b.SaveToken = true;
                 b.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
+                    ValidAudience = jwtSetting.GetSection("ValidAudience").Value,
                     ValidIssuer = jwtSetting.GetSection("Issuer").Value,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
                 };
@@ -104,7 +107,7 @@ namespace dadri_api
                 {
                     Endpoint="*",
                     Limit=1,
-                    Period="5s"
+                    Period="1s"
                 }
             };
             services.Configure<IpRateLimitOptions>(opt =>

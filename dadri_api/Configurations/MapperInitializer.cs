@@ -20,6 +20,8 @@ namespace dadri_api.Configurations
             CreateMap<UserRegister,UserRegisterCreateDTO>().ReverseMap();            
             CreateMap<ApiUser, UserDTO>().ReverseMap();
             CreateMap<UsersApproveResgister, UsersApproveResgisterDTO>().ReverseMap();
+            CreateMap<UserDept, UserDeptDTO>().ReverseMap();
+            CreateMap<UserDept, UserDeptDTOCreate>().ReverseMap();
         }
     }
 }

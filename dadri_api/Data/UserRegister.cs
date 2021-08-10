@@ -15,7 +15,7 @@ namespace dadri_api.Data
         public string FirstName { get; set; }
         public string LastName { get; set; }        
         public string Email { get; set; }
-        public string Mobile { get; set; }
+        public string PhoneNumber { get; set; }
         public string Ip { get; set; }
         public string Mac { get; set; }
         public string DeviceName { get; set; }

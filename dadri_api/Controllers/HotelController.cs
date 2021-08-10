@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using dadri_api.Data;
 using dadri_api.IRepository;
 using dadri_api.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -36,11 +37,10 @@ namespace dadri_api.Controllers
             var results = _mapper.Map<List<HotelDTO>>(hotels);
             return Ok(results);
 
-        }
-        [Authorize]
-        [HttpGet("{hotelId:int}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        } 
+        [Authorize(Roles = "Administrator")]
+        [HttpGet("{hotelId:int}",Name = "GetHotel")]
+        [ProducesResponseType(StatusCodes.Status200OK)]        
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         
         public async Task<IActionResult> GetHotel(int hotelId)
@@ -49,6 +49,25 @@ namespace dadri_api.Controllers
             var result = _mapper.Map<HotelDTO>(hotel);
             return Ok(result);
 
+        }
+        
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+        public async Task<IActionResult> CreateHotel([FromBody] CreateHotelDTO hotelDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var hotel = _mapper.Map<Hotel>(hotelDTO);
+            await _unitOfWork.Hotels.Insert(hotel);
+            await _unitOfWork.Save();
+            return CreatedAtRoute("GetHotel", new { hotelId = hotel.HotelId },hotel);
+        
         }
     }
 }

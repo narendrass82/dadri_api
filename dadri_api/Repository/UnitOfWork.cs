@@ -19,8 +19,7 @@ namespace dadri_api.Repository
         private IGenericRepository<TypeIndicator> _typeIndicators ;
 
         private IGenericRepository<URole> _uRoles ;
-
-        private IGenericRepository<User> _users ;
+        
 
         private IGenericRepository<UserDept> _userDepts ;
 
@@ -29,8 +28,6 @@ namespace dadri_api.Repository
         private IGenericRepository<UserEmployer> _userEmployers ;
 
         private IGenericRepository<UserGrade> _userGrades ;
-
-        private IGenericRepository<UserLogin> _userLogins ;
 
         private IGenericRepository<UserPersonalArea> _userPersonalAreas ;
 
@@ -56,8 +53,6 @@ namespace dadri_api.Repository
 
         public IGenericRepository<URole> URoles => _uRoles ??= new GenericRepository<URole>(_context);
 
-        public IGenericRepository<User> Users => _users ??= new GenericRepository<User>(_context);
-
         public IGenericRepository<UserDept> UserDepts => _userDepts ??= new GenericRepository<UserDept>(_context);
 
         public IGenericRepository<UserDeptGroup> UserDeptGroups => _userDeptGroups ??= new GenericRepository<UserDeptGroup>(_context);
@@ -65,8 +60,6 @@ namespace dadri_api.Repository
         public IGenericRepository<UserEmployer> UserEmployers => _userEmployers ??= new GenericRepository<UserEmployer>(_context);
 
         public IGenericRepository<UserGrade> UserGrades => _userGrades ??= new GenericRepository<UserGrade>(_context);
-
-        public IGenericRepository<UserLogin> UserLogins => _userLogins ??= new GenericRepository<UserLogin>(_context);
 
         public IGenericRepository<UserPersonalArea> UserPersonalAreas => _userPersonalAreas ??= new GenericRepository<UserPersonalArea>(_context);
 

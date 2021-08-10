@@ -11,11 +11,12 @@ namespace dadri_api.Data
     {
        
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuarterId { get; set; }
         public string QuarterDescription { get; set; }
         public string QuarterCode { get; set; }
         public bool Isoccupied { get; set; }        
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime OccupiedDate { get; set; }
         [ForeignKey(nameof(TypeIndicator))]
         public int TypeId { get; set; }

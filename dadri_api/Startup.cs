@@ -7,6 +7,7 @@ using dadri_api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -40,7 +41,8 @@ namespace dadri_api
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"));
                 
             });
-            
+            services.AddIdentity<ApiUser, IdentityRole>().AddEntityFrameworkStores<DatabaseContext>();
+
             services.AddMemoryCache();
             // inject counter and rules stores
             services.AddInMemoryRateLimiting();
@@ -65,7 +67,32 @@ namespace dadri_api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1", Description="NTPC Dadri IT Api"});
-            });
+                //To enable authorization using swagger(JWT)                    
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                          new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            new string[] {}
+
+                    }
+                });
+            });            
 
             services.AddControllers(config=> 
             {
@@ -101,6 +128,7 @@ namespace dadri_api
             
             app.UseCors("AllowAll");
 
+            
             app.UseResponseCaching();
             app.UseHttpCacheHeaders();
             app.UseIpRateLimiting();

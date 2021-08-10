@@ -16,5 +16,6 @@ namespace dadri_api.Data
         public string ProjectDescription { get; set; }
         [ForeignKey(nameof(TypeIndicator))]
         public int TypeId { get; set; }
+        
     }
 }

@@ -10,13 +10,14 @@ namespace dadri_api.Data
     public class TownshipQuarterArchive
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuarterAId { get; set; }        
         [ForeignKey(nameof(TownshipQuarter))]
         public int QuarterId { get; set; }
         public string QuarterDescription { get; set; }
         public string QuarterCode { get; set; }
         public bool Isoccupied { get; set; }        
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime OccupiedDate { get; set; }
         public DateTime VacatedDate { get; set; }
         [ForeignKey(nameof(TypeIndicator))]

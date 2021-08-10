@@ -13,13 +13,11 @@ namespace dadri_api.IRepository
         IGenericRepository<TownshipQuarter> TownshipQuarters { get; }
         IGenericRepository<TownshipQuarterArchive> TownshipQuarterArchives { get; }
         IGenericRepository<TypeIndicator> TypeIndicators { get; }
-        IGenericRepository<URole> URoles { get; }
-        IGenericRepository<User> Users { get; }
+        IGenericRepository<URole> URoles { get; }        
         IGenericRepository<UserDept> UserDepts { get; }
         IGenericRepository<UserDeptGroup> UserDeptGroups { get; }
         IGenericRepository<UserEmployer> UserEmployers { get; }
-        IGenericRepository<UserGrade> UserGrades { get; }
-        IGenericRepository<UserLogin> UserLogins { get; }
+        IGenericRepository<UserGrade> UserGrades { get; }       
         IGenericRepository<UserPersonalArea> UserPersonalAreas { get; }
         IGenericRepository<UserProject> UserProjects { get; }
         IGenericRepository<UserRegister> UserRegisters { get; }

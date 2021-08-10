@@ -12,6 +12,7 @@ namespace dadri_api.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<TypeIndicator> builder)
         {
+            builder.Property(c => c.TypeId).ValueGeneratedOnAdd();
             builder.HasData(
                 new TypeIndicator
                 {

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dadri_api.Data;
 
 namespace dadri_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210808110615_EmpNoAdded")]
+    partial class EmpNoAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,147 +51,147 @@ namespace dadri_api.Migrations
                         new
                         {
                             Id = "62a7ffd0-c6ca-4b3b-aeea-6bcbb9b8c848",
-                            ConcurrencyStamp = "281dc1c4-979a-46bc-8b8b-3a26e6039ecb",
+                            ConcurrencyStamp = "67d890d8-0d2b-49c0-b4c6-bb0af4f6622c",
                             Name = "Role",
                             NormalizedName = "ROLE"
                         },
                         new
                         {
                             Id = "b7af329b-19fe-467a-a8e0-233cbf009363",
-                            ConcurrencyStamp = "61aa7fba-a412-47cb-b535-3201827cfdeb",
+                            ConcurrencyStamp = "3aacadc1-04ac-4782-bd70-a5be2d093bb8",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = "a04c2463-f4d8-4615-b423-e351b1788e42",
-                            ConcurrencyStamp = "2d4a0a19-6fe7-46c1-a283-e9733f6caca4",
+                            ConcurrencyStamp = "af474cf3-3ee4-482d-b5f9-51750a1eb435",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "1f76d77a-cd8f-42f4-b818-3f6436fa59ab",
-                            ConcurrencyStamp = "8b92a758-9f39-468e-8a8b-fe4ccd1982a0",
+                            ConcurrencyStamp = "ad776f28-7375-4a17-a9b8-994ae011557e",
                             Name = "Sas",
                             NormalizedName = "SAS"
                         },
                         new
                         {
                             Id = "dbac2059-1264-45c5-a33f-81fc2bad3d72",
-                            ConcurrencyStamp = "6db05e16-99f2-45da-8e0a-3d3774d13f9a",
+                            ConcurrencyStamp = "71ab5f52-9367-4dab-aad1-af8c1d25c1fc",
                             Name = "SasAdmin",
                             NormalizedName = "SASADMIN"
                         },
                         new
                         {
                             Id = "2cf03a26-2bed-4d3f-b557-0e703e771640",
-                            ConcurrencyStamp = "292aac7b-154c-4c3d-9165-67b53971040a",
+                            ConcurrencyStamp = "822ad124-cca6-41e2-8e01-6fff8183970c",
                             Name = "Welfare",
                             NormalizedName = "WELFARE"
                         },
                         new
                         {
                             Id = "9791d714-34de-4c62-ad2a-f4bd29ab5059",
-                            ConcurrencyStamp = "2c061b87-c2f6-4c4b-b24e-4fb9cce53861",
+                            ConcurrencyStamp = "07f67847-9f65-4cee-9196-e2a30d6ced5b",
                             Name = "WelfareNtpcClub",
                             NormalizedName = "WELFARENTPCCLUB"
                         },
                         new
                         {
                             Id = "abcc56c0-6aba-4f32-9585-1322f9aa41e4",
-                            ConcurrencyStamp = "365dabd5-1d0b-4294-b0bf-1976826fa159",
+                            ConcurrencyStamp = "04329189-64f9-410a-811f-40a6b2d332ae",
                             Name = "WelfareNtpcClubAdmin",
                             NormalizedName = "WELFARENTPCCLUBADMIN"
                         },
                         new
                         {
                             Id = "76a57f2b-705b-47d1-82bb-93b4d3048e54",
-                            ConcurrencyStamp = "b33f2a7d-a5da-42b0-8b69-ef60b310f745",
+                            ConcurrencyStamp = "91ce0450-1151-4da0-bd34-c11574c188fd",
                             Name = "WelfareVrc",
                             NormalizedName = "WELFAREVRC"
                         },
                         new
                         {
                             Id = "c41af5eb-fb37-460d-937f-c644f8acedca",
-                            ConcurrencyStamp = "4040da2a-fc1e-4350-8cf7-df329f6e315c",
+                            ConcurrencyStamp = "b23a1d0b-45bf-4703-b91d-ca7cd4433062",
                             Name = "WelfareVrcAdmin",
                             NormalizedName = "WELFAREVRCADMIN"
                         },
                         new
                         {
                             Id = "7fbe20a2-734c-498e-872f-e03afdbe11a1",
-                            ConcurrencyStamp = "9770e3ac-db80-4df8-90d5-ce1caa5cff3d",
+                            ConcurrencyStamp = "d1d52cc5-7986-47c7-ae89-9a1f2fd85673",
                             Name = "Bus",
                             NormalizedName = "BUS"
                         },
                         new
                         {
                             Id = "8ac95a0c-15ce-45fa-80d9-6b45e02cfb1f",
-                            ConcurrencyStamp = "8973d04a-eb95-4bb3-87f9-4372a0308a83",
+                            ConcurrencyStamp = "293a5e25-f0a7-400d-b9b2-c2e881087d0a",
                             Name = "BusConductor",
                             NormalizedName = "BUSCONDUCTOR"
                         },
                         new
                         {
                             Id = "21ca4de3-5ca7-4ecc-aace-8fcd21bce9fd",
-                            ConcurrencyStamp = "b52729ab-b441-445d-b020-1d3059ff061d",
+                            ConcurrencyStamp = "6a77ffa8-927b-443a-9cab-71fa85eda1c3",
                             Name = "BusWallet",
                             NormalizedName = "BUSWALLET"
                         },
                         new
                         {
                             Id = "023f0684-e4ed-4233-af77-01eb12e5b3f9",
-                            ConcurrencyStamp = "5b0733b0-ec67-4d20-8255-f761060bcbd7",
+                            ConcurrencyStamp = "3b03195a-959e-4332-93de-30b58d31a15f",
                             Name = "BusWalletAdmin",
                             NormalizedName = "BUSWALLETADMIN"
                         },
                         new
                         {
                             Id = "114c241c-5bf4-476b-a563-d01c16347f43",
-                            ConcurrencyStamp = "5d2d4241-992f-47d2-9fc5-fcf3f377dc84",
+                            ConcurrencyStamp = "fbea9a8b-aa2e-4fa9-b6d0-c61f9aab67a3",
                             Name = "HospitalAdmin",
                             NormalizedName = "HOSPITALADMIN"
                         },
                         new
                         {
                             Id = "81c9ff14-99a4-42ce-9485-2357fee4cbd1",
-                            ConcurrencyStamp = "1ab89f8b-8904-4553-a7fb-c087feaa373f",
+                            ConcurrencyStamp = "57d34d20-5134-4596-9f1d-64c529399256",
                             Name = "Movie",
                             NormalizedName = "MOVIE"
                         },
                         new
                         {
                             Id = "6f9940a0-9984-4aad-80dc-3a3ef5f66c90",
-                            ConcurrencyStamp = "f6766bb1-9add-4507-9316-8e6e714e0cc9",
+                            ConcurrencyStamp = "6c6d00fe-e987-4ce9-9ba4-471221ca1790",
                             Name = "MovieAdmin",
                             NormalizedName = "MOVIEADMIN"
                         },
                         new
                         {
                             Id = "715eb33f-22ed-4f64-8995-6a079665cd8e",
-                            ConcurrencyStamp = "5de561ba-1981-4807-ab1f-97535cee4b8b",
+                            ConcurrencyStamp = "d148448e-ab5c-4290-b1d9-25734ff849fe",
                             Name = "Township",
                             NormalizedName = "TOWNSHIP"
                         },
                         new
                         {
                             Id = "8d30de17-ac0c-4c89-9a36-f83605ec18b6",
-                            ConcurrencyStamp = "79a168e9-1cdb-41ea-b8a3-b5cd2ae66faf",
+                            ConcurrencyStamp = "871c24a1-1c0b-4e06-a7b2-3b59fd731cd6",
                             Name = "TownshipAdmin",
                             NormalizedName = "TOWNSHIPADMIN"
                         },
                         new
                         {
                             Id = "17768e60-b9d2-42de-b1d8-bc232e00352a",
-                            ConcurrencyStamp = "6fd74831-31a9-433e-9622-443c2f2d6aa0",
+                            ConcurrencyStamp = "b7f9cded-d406-4cbe-8333-3f1a12f0a4a3",
                             Name = "Dsm",
                             NormalizedName = "DSM"
                         },
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "151fbef3-13aa-4b0f-aad9-dbc51c09b892",
+                            ConcurrencyStamp = "806da96b-e63e-4fca-b245-fe0f9489eff1",
                             Name = "Super",
                             NormalizedName = "SUPER"
                         });
@@ -439,22 +441,22 @@ namespace dadri_api.Migrations
                         {
                             Id = "315fd140-825a-4ed6-9c6a-c69f31d1bbb3",
                             AccessFailedCount = 0,
-                            ApprovalDate = new DateTime(2021, 8, 8, 16, 43, 14, 571, DateTimeKind.Local).AddTicks(7035),
+                            ApprovalDate = new DateTime(2021, 8, 8, 16, 36, 13, 477, DateTimeKind.Local).AddTicks(4797),
                             ApprovedBy = "super",
-                            ConcurrencyStamp = "3c47b9cf-ace6-4b89-a421-7a5194e0c104",
-                            DOB = new DateTime(2021, 8, 8, 16, 43, 14, 571, DateTimeKind.Local).AddTicks(7843),
+                            ConcurrencyStamp = "5b9f5283-7e91-4a52-b4cd-21f51963d2e6",
+                            DOB = new DateTime(2021, 8, 8, 16, 36, 13, 477, DateTimeKind.Local).AddTicks(5625),
                             DeptId = 1,
                             Email = "super@ntpc.co.in",
                             EmailConfirmed = false,
                             EmployerId = 1,
-                            EntryIntoGrade = new DateTime(2021, 8, 8, 16, 43, 14, 571, DateTimeKind.Local).AddTicks(8191),
+                            EntryIntoGrade = new DateTime(2021, 8, 8, 16, 36, 13, 477, DateTimeKind.Local).AddTicks(5973),
                             FirstName = "Super",
                             GradeId = 1,
                             IsApproved = true,
                             LastName = "Singh",
                             LockoutEnabled = false,
-                            NTPCJoining = new DateTime(2021, 8, 8, 16, 43, 14, 571, DateTimeKind.Local).AddTicks(9392),
-                            PasswordHash = "AQAAAAEAACcQAAAAENMwsh/Bc7+ir8x/612iDPI7P8gUtwu5BCbCqml1PSn/6KHaHDbK+HO59+uzhAMqIw==",
+                            NTPCJoining = new DateTime(2021, 8, 8, 16, 36, 13, 477, DateTimeKind.Local).AddTicks(7162),
+                            PasswordHash = "AQAAAAEAACcQAAAAEO9e1gObDXn1vYhFO6zK8dxom/eGYfKXUFEL2/3irv86F83lHD2OPOCPCv9be/4gvA==",
                             PersonalAreaId = 999,
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
@@ -463,7 +465,7 @@ namespace dadri_api.Migrations
                             QuarterId = 0,
                             RegisterId = 0,
                             RegistratinDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SecurityStamp = "905f4851-8f97-40f6-809f-a9b2a687f2a5",
+                            SecurityStamp = "ddcfa28f-861f-434e-a0d1-5b978a03089c",
                             TwoFactorEnabled = false,
                             UserName = "super@ntpc.co.in"
                         });
@@ -24720,1072 +24722,1072 @@ namespace dadri_api.Migrations
                         new
                         {
                             ProjectId = 1000,
-                            ProjectCode = "1000",
-                            ProjectDescription = "Corporate Centre",
+                            ProjectCode = "Corporate Centre",
+                            ProjectDescription = "1000",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1001,
-                            ProjectCode = "1001",
-                            ProjectDescription = "EOC Noida Office",
+                            ProjectCode = "EOC Noida Office",
+                            ProjectDescription = "1001",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1002,
-                            ProjectCode = "1002",
-                            ProjectDescription = "Consultancy Wing",
+                            ProjectCode = "Consultancy Wing",
+                            ProjectDescription = "1002",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1003,
-                            ProjectCode = "1003",
-                            ProjectDescription = "Northern Region  HeadQuaters",
+                            ProjectCode = "Northern Region  HeadQuaters",
+                            ProjectDescription = "1003",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1004,
-                            ProjectCode = "1004",
-                            ProjectDescription = "Singrauli Super Thermal Power",
+                            ProjectCode = "Singrauli Super Thermal Power",
+                            ProjectDescription = "1004",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1005,
-                            ProjectCode = "1005",
-                            ProjectDescription = "Rihand Super Thermal Power",
+                            ProjectCode = "Rihand Super Thermal Power",
+                            ProjectDescription = "1005",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1006,
-                            ProjectCode = "1006",
-                            ProjectDescription = "Feroz Gandhi Unchahar  Thermal",
+                            ProjectCode = "Feroz Gandhi Unchahar  Thermal",
+                            ProjectDescription = "1006",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1007,
-                            ProjectCode = "1007",
-                            ProjectDescription = "Tanda Thermal Power Project",
+                            ProjectCode = "Tanda Thermal Power Project",
+                            ProjectDescription = "1007",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1008,
-                            ProjectCode = "1008",
-                            ProjectDescription = "DBF Head Quarters",
+                            ProjectCode = "DBF Head Quarters",
+                            ProjectDescription = "1008",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1010,
-                            ProjectCode = "1010",
-                            ProjectDescription = "Badarpur Thermal Power Station",
+                            ProjectCode = "Badarpur Thermal Power Station",
+                            ProjectDescription = "1010",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1011,
-                            ProjectCode = "1011",
-                            ProjectDescription = "National Capital Power Project",
+                            ProjectCode = "National Capital Power Project",
+                            ProjectDescription = "1011",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1012,
-                            ProjectCode = "1012",
-                            ProjectDescription = "Auraiya Gas Power Station",
+                            ProjectCode = "Auraiya Gas Power Station",
+                            ProjectDescription = "1012",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1013,
-                            ProjectCode = "1013",
-                            ProjectDescription = "Anta Gas Power Station",
+                            ProjectCode = "Anta Gas Power Station",
+                            ProjectDescription = "1013",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1014,
-                            ProjectCode = "1014",
-                            ProjectDescription = "National Capital Power Project",
+                            ProjectCode = "National Capital Power Project",
+                            ProjectDescription = "1014",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1015,
-                            ProjectCode = "1015",
-                            ProjectDescription = "Faridabad Gas Power Station",
+                            ProjectCode = "Faridabad Gas Power Station",
+                            ProjectDescription = "1015",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1016,
-                            ProjectCode = "1016",
-                            ProjectDescription = "Western Region HeadQuarters",
+                            ProjectCode = "Western Region HeadQuarters",
+                            ProjectDescription = "1016",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1017,
-                            ProjectCode = "1017",
-                            ProjectDescription = "Korba Super Thermal Power",
+                            ProjectCode = "Korba Super Thermal Power",
+                            ProjectDescription = "1017",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1018,
-                            ProjectCode = "1018",
-                            ProjectDescription = "Vindhyachal Super Thermal Power",
+                            ProjectCode = "Vindhyachal Super Thermal Power",
+                            ProjectDescription = "1018",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1019,
-                            ProjectCode = "1019",
-                            ProjectDescription = "Sipat Super Thermal Power",
+                            ProjectCode = "Sipat Super Thermal Power",
+                            ProjectDescription = "1019",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1020,
-                            ProjectCode = "1020",
-                            ProjectDescription = "Kawas Gas Power Project",
+                            ProjectCode = "Kawas Gas Power Project",
+                            ProjectDescription = "1020",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1021,
-                            ProjectCode = "1021",
-                            ProjectDescription = "JHANOR GANDHAR GAS  POWER PROJECT",
+                            ProjectCode = "JHANOR GANDHAR GAS  POWER PROJECT",
+                            ProjectDescription = "1021",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1022,
-                            ProjectCode = "1022",
-                            ProjectDescription = "Eastern Region HeadQuarters",
+                            ProjectCode = "Eastern Region HeadQuarters",
+                            ProjectDescription = "1022",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1023,
-                            ProjectCode = "1023",
-                            ProjectDescription = "T&CC Office Kolkata",
+                            ProjectCode = "T&CC Office Kolkata",
+                            ProjectDescription = "1023",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1024,
-                            ProjectCode = "1024",
-                            ProjectDescription = "Farakka Super Thermal Power",
+                            ProjectCode = "Farakka Super Thermal Power",
+                            ProjectDescription = "1024",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1025,
-                            ProjectCode = "1025",
-                            ProjectDescription = "Kahalgaon Super Thermal Power",
+                            ProjectCode = "Kahalgaon Super Thermal Power",
+                            ProjectDescription = "1025",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1026,
-                            ProjectCode = "1026",
-                            ProjectDescription = "Talcher Super Thermal Power",
+                            ProjectCode = "Talcher Super Thermal Power",
+                            ProjectDescription = "1026",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1027,
-                            ProjectCode = "1027",
-                            ProjectDescription = "Talcher Thermal Power Station",
+                            ProjectCode = "Talcher Thermal Power Station",
+                            ProjectDescription = "1027",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1028,
-                            ProjectCode = "1028",
-                            ProjectDescription = "Barh Super Thermal Power",
+                            ProjectCode = "Barh Super Thermal Power",
+                            ProjectDescription = "1028",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1029,
-                            ProjectCode = "1029",
-                            ProjectDescription = "North Karanpura Super Thermal",
+                            ProjectCode = "North Karanpura Super Thermal",
+                            ProjectDescription = "1029",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1030,
-                            ProjectCode = "1030",
-                            ProjectDescription = "Lalmatia Project",
+                            ProjectCode = "Lalmatia Project",
+                            ProjectDescription = "1030",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1031,
-                            ProjectCode = "1031",
-                            ProjectDescription = "SOUTHERN REGION HEAD QUARTERS",
+                            ProjectCode = "SOUTHERN REGION HEAD QUARTERS",
+                            ProjectDescription = "1031",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1032,
-                            ProjectCode = "1032",
-                            ProjectDescription = "T&CC Office Chennai",
+                            ProjectCode = "T&CC Office Chennai",
+                            ProjectDescription = "1032",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1033,
-                            ProjectCode = "1033",
-                            ProjectDescription = "Ramagundam Super Thermal Power",
+                            ProjectCode = "Ramagundam Super Thermal Power",
+                            ProjectDescription = "1033",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1034,
-                            ProjectCode = "1034",
-                            ProjectDescription = "Rajiv Gandhi Combined Cycle",
+                            ProjectCode = "Rajiv Gandhi Combined Cycle",
+                            ProjectDescription = "1034",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1035,
-                            ProjectCode = "1035",
-                            ProjectDescription = "Simhadri Super Thermal Power",
+                            ProjectCode = "Simhadri Super Thermal Power",
+                            ProjectDescription = "1035",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1036,
-                            ProjectCode = "1036",
-                            ProjectDescription = "Mangalore Super Thermal Power Project",
+                            ProjectCode = "Mangalore Super Thermal Power Project",
+                            ProjectDescription = "1036",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1037,
-                            ProjectCode = "1037",
-                            ProjectDescription = "KOLDAM HYDRO POWER PROJECT",
+                            ProjectCode = "KOLDAM HYDRO POWER PROJECT",
+                            ProjectDescription = "1037",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1038,
-                            ProjectCode = "1038",
-                            ProjectDescription = "TVHPP",
+                            ProjectCode = "TVHPP",
+                            ProjectDescription = "1038",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1039,
-                            ProjectCode = "1039",
-                            ProjectDescription = "Lahorinag - Pala Hydro Power",
+                            ProjectCode = "Lahorinag - Pala Hydro Power",
+                            ProjectDescription = "1039",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1040,
-                            ProjectCode = "1040",
-                            ProjectDescription = "Pakri Barwadih,Chat Bariatu &",
+                            ProjectCode = "Pakri Barwadih,Chat Bariatu &",
+                            ProjectDescription = "1040",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1041,
-                            ProjectCode = "1041",
-                            ProjectDescription = "WRHQ II",
+                            ProjectCode = "WRHQ II",
+                            ProjectDescription = "1041",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1042,
-                            ProjectCode = "1042",
-                            ProjectDescription = "Bongaigaon Thermal Power Project",
+                            ProjectCode = "Bongaigaon Thermal Power Project",
+                            ProjectDescription = "1042",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1043,
-                            ProjectCode = "1043",
-                            ProjectDescription = "Mouda Super Thermal Power",
+                            ProjectCode = "Mouda Super Thermal Power",
+                            ProjectDescription = "1043",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1044,
-                            ProjectCode = "1044",
-                            ProjectDescription = "ERHQ II",
+                            ProjectCode = "ERHQ II",
+                            ProjectDescription = "1044",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1045,
-                            ProjectCode = "1045",
-                            ProjectDescription = "Solapur STPP",
+                            ProjectCode = "Solapur STPP",
+                            ProjectDescription = "1045",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1046,
-                            ProjectCode = "1046",
-                            ProjectDescription = "Kudgi Super Thermal Power Project",
+                            ProjectCode = "Kudgi Super Thermal Power Project",
+                            ProjectDescription = "1046",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1047,
-                            ProjectCode = "1047",
-                            ProjectDescription = "LARA SUPER THERMAL POWER PROJECT",
+                            ProjectCode = "LARA SUPER THERMAL POWER PROJECT",
+                            ProjectDescription = "1047",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1048,
-                            ProjectCode = "1048",
-                            ProjectDescription = "A&N Islands SOLAR PV",
+                            ProjectCode = "A&N Islands SOLAR PV",
+                            ProjectDescription = "1048",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1049,
-                            ProjectCode = "1049",
-                            ProjectDescription = "Gadarwara STPP",
+                            ProjectCode = "Gadarwara STPP",
+                            ProjectDescription = "1049",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1050,
-                            ProjectCode = "1050",
-                            ProjectDescription = "Rajgarh SOLAR PV",
+                            ProjectCode = "Rajgarh SOLAR PV",
+                            ProjectDescription = "1050",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1051,
-                            ProjectCode = "1051",
-                            ProjectDescription = "Rammam Hydro Power Project.",
+                            ProjectCode = "Rammam Hydro Power Project.",
+                            ProjectDescription = "1051",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1052,
-                            ProjectCode = "1052",
-                            ProjectDescription = "Lata Tapovan Hydro Power Project",
+                            ProjectCode = "Lata Tapovan Hydro Power Project",
+                            ProjectDescription = "1052",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1053,
-                            ProjectCode = "1053",
-                            ProjectDescription = "Darlipali STPP",
+                            ProjectCode = "Darlipali STPP",
+                            ProjectDescription = "1053",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1054,
-                            ProjectCode = "1054",
-                            ProjectDescription = "KHARGONE STPP",
+                            ProjectCode = "KHARGONE STPP",
+                            ProjectDescription = "1054",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1055,
-                            ProjectCode = "1055",
-                            ProjectDescription = "Ananthapuramu UM Solar PP",
+                            ProjectCode = "Ananthapuramu UM Solar PP",
+                            ProjectDescription = "1055",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1056,
-                            ProjectCode = "1056",
-                            ProjectDescription = "HRHQ",
+                            ProjectCode = "HRHQ",
+                            ProjectDescription = "1056",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1057,
-                            ProjectCode = "1057",
-                            ProjectDescription = "TELANGANA Super Thermal Power",
+                            ProjectCode = "TELANGANA Super Thermal Power",
+                            ProjectDescription = "1057",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1058,
-                            ProjectCode = "1058",
-                            ProjectDescription = "Bhadla Solar PV (4 X 65 MW)",
+                            ProjectCode = "Bhadla Solar PV (4 X 65 MW)",
+                            ProjectDescription = "1058",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1059,
-                            ProjectCode = "1059",
-                            ProjectDescription = "Mandsaur Solar PV (5X50 MW)",
+                            ProjectCode = "Mandsaur Solar PV (5X50 MW)",
+                            ProjectDescription = "1059",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1060,
-                            ProjectCode = "1060",
-                            ProjectDescription = "Rajmol Wind energy 50 MW",
+                            ProjectCode = "Rajmol Wind energy 50 MW",
+                            ProjectDescription = "1060",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1061,
-                            ProjectCode = "1061",
-                            ProjectDescription = "OE Block - KG-OSN-2009/1",
+                            ProjectCode = "OE Block - KG-OSN-2009/1",
+                            ProjectDescription = "1061",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1062,
-                            ProjectCode = "1062",
-                            ProjectDescription = "OE Block - KG-OSN-2009/4",
+                            ProjectCode = "OE Block - KG-OSN-2009/4",
+                            ProjectDescription = "1062",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1063,
-                            ProjectCode = "1063",
-                            ProjectDescription = "OE Block - KG-OSN-2009/13",
+                            ProjectCode = "OE Block - KG-OSN-2009/13",
+                            ProjectDescription = "1063",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1064,
-                            ProjectCode = "1064",
-                            ProjectDescription = "OE Block - CB-ONN-2009/5",
+                            ProjectCode = "OE Block - CB-ONN-2009/5",
+                            ProjectDescription = "1064",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1070,
-                            ProjectCode = "1070",
-                            ProjectDescription = "Dulanga Coal Mining Project",
+                            ProjectCode = "Dulanga Coal Mining Project",
+                            ProjectDescription = "1070",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1071,
-                            ProjectCode = "1071",
-                            ProjectDescription = "Talaipalli Coal Mining Project",
+                            ProjectCode = "Talaipalli Coal Mining Project",
+                            ProjectDescription = "1071",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1072,
-                            ProjectCode = "1072",
-                            ProjectDescription = "Barauni  Thermal Power Plant",
+                            ProjectCode = "Barauni  Thermal Power Plant",
+                            ProjectDescription = "1072",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1073,
-                            ProjectCode = "1073",
-                            ProjectDescription = "Bilhaur Solar PV Plant",
+                            ProjectCode = "Bilhaur Solar PV Plant",
+                            ProjectDescription = "1073",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1074,
-                            ProjectCode = "1074",
-                            ProjectDescription = "Coal Mining HeadQuarters",
+                            ProjectCode = "Coal Mining HeadQuarters",
+                            ProjectDescription = "1074",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1075,
-                            ProjectCode = "1075",
-                            ProjectDescription = "Jetsar SOLAR PV",
+                            ProjectCode = "Jetsar SOLAR PV",
+                            ProjectDescription = "1075",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1076,
-                            ProjectCode = "1076",
-                            ProjectDescription = "Devikot  SOLAR PV",
+                            ProjectCode = "Devikot  SOLAR PV",
+                            ProjectDescription = "1076",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1077,
-                            ProjectCode = "1077",
-                            ProjectDescription = "Sambhu Ki Bhurj – I Solar Project",
+                            ProjectCode = "Sambhu Ki Bhurj – I Solar Project",
+                            ProjectDescription = "1077",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1078,
-                            ProjectCode = "1078",
-                            ProjectDescription = "Kerandari  'A' CMP",
+                            ProjectCode = "Kerandari  'A' CMP",
+                            ProjectDescription = "1078",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1079,
-                            ProjectCode = "1079",
-                            ProjectDescription = "Chatti-Bariatu Coal Mining Project",
+                            ProjectCode = "Chatti-Bariatu Coal Mining Project",
+                            ProjectDescription = "1079",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1080,
-                            ProjectCode = "1080",
-                            ProjectDescription = "Fatehgarh Solar PV Proj-296MW",
+                            ProjectCode = "Fatehgarh Solar PV Proj-296MW",
+                            ProjectDescription = "1080",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1081,
-                            ProjectCode = "1081",
-                            ProjectDescription = "Nokhra Solar PV Project -300MW",
+                            ProjectCode = "Nokhra Solar PV Project -300MW",
+                            ProjectDescription = "1081",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1082,
-                            ProjectCode = "1082",
-                            ProjectDescription = "Sambhu Ki Bhurj – II Solar Project",
+                            ProjectCode = "Sambhu Ki Bhurj – II Solar Project",
+                            ProjectDescription = "1082",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 1083,
-                            ProjectCode = "1083",
-                            ProjectDescription = "Ettayapuram SolarPVP-230 MW",
+                            ProjectCode = "Ettayapuram SolarPVP-230 MW",
+                            ProjectDescription = "1083",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2590,
-                            ProjectCode = "1A01",
-                            ProjectDescription = "NTPC --CHANDIGARH Comm. Office",
+                            ProjectCode = "NTPC --CHANDIGARH Comm. Office",
+                            ProjectDescription = "1A01",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2591,
-                            ProjectCode = "1A51",
-                            ProjectDescription = "Rammam Hydro Power Project.",
+                            ProjectCode = "Rammam Hydro Power Project.",
+                            ProjectDescription = "1A51",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2010,
-                            ProjectCode = "2010",
-                            ProjectDescription = "NESCL Corporate Office",
+                            ProjectCode = "NESCL Corporate Office",
+                            ProjectDescription = "2010",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2015,
-                            ProjectCode = "2015",
-                            ProjectDescription = "Nabinagar Thermal Power Project",
+                            ProjectCode = "Nabinagar Thermal Power Project",
+                            ProjectDescription = "2015",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2020,
-                            ProjectCode = "2020",
-                            ProjectDescription = "NVVN - Corporate Office",
+                            ProjectCode = "NVVN - Corporate Office",
+                            ProjectDescription = "2020",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2025,
-                            ProjectCode = "2025",
-                            ProjectDescription = "Patratu Vidyut Utpadan Nigam Ltd",
+                            ProjectCode = "Patratu Vidyut Utpadan Nigam Ltd",
+                            ProjectDescription = "2025",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2030,
-                            ProjectCode = "2030",
-                            ProjectDescription = "NHL  Corporate Office",
+                            ProjectCode = "NHL  Corporate Office",
+                            ProjectDescription = "2030",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2031,
-                            ProjectCode = "2031",
-                            ProjectDescription = "Rammam Hydel Project III",
+                            ProjectCode = "Rammam Hydel Project III",
+                            ProjectDescription = "2031",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2032,
-                            ProjectCode = "2032",
-                            ProjectDescription = "Lata Tapovan Hydro Power Project",
+                            ProjectCode = "Lata Tapovan Hydro Power Project",
+                            ProjectDescription = "2032",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2035,
-                            ProjectCode = "2035",
-                            ProjectDescription = "Nabinagar Power Generating Company",
+                            ProjectCode = "Nabinagar Power Generating Company",
+                            ProjectDescription = "2035",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2040,
-                            ProjectCode = "2040",
-                            ProjectDescription = "Muzaffarpur Thermal Power Station",
+                            ProjectCode = "Muzaffarpur Thermal Power Station",
+                            ProjectDescription = "2040",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2045,
-                            ProjectCode = "2045",
-                            ProjectDescription = "NTPC Mining limited",
+                            ProjectCode = "NTPC Mining limited",
+                            ProjectDescription = "2045",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2060,
-                            ProjectCode = "2060",
-                            ProjectDescription = "NTPC Renewable Energy Limited",
+                            ProjectCode = "NTPC Renewable Energy Limited",
+                            ProjectDescription = "2060",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2065,
-                            ProjectCode = "2065",
-                            ProjectDescription = "NEWS",
+                            ProjectCode = "NEWS",
+                            ProjectDescription = "2065",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2200,
-                            ProjectCode = "2200",
-                            ProjectDescription = "NVVNL Simhadri",
+                            ProjectCode = "NVVNL Simhadri",
+                            ProjectDescription = "2200",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2201,
-                            ProjectCode = "2201",
-                            ProjectDescription = "NVVNL RSTPP",
+                            ProjectCode = "NVVNL RSTPP",
+                            ProjectDescription = "2201",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2203,
-                            ProjectCode = "2203",
-                            ProjectDescription = "NVVNL NCTPP",
+                            ProjectCode = "NVVNL NCTPP",
+                            ProjectDescription = "2203",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2204,
-                            ProjectCode = "2204",
-                            ProjectDescription = "NVVNL SSTPP",
+                            ProjectCode = "NVVNL SSTPP",
+                            ProjectDescription = "2204",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2205,
-                            ProjectCode = "2205",
-                            ProjectDescription = "NVVNL Rihand",
+                            ProjectCode = "NVVNL Rihand",
+                            ProjectDescription = "2205",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2206,
-                            ProjectCode = "2206",
-                            ProjectDescription = "NVVNL Badarpur",
+                            ProjectCode = "NVVNL Badarpur",
+                            ProjectDescription = "2206",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2207,
-                            ProjectCode = "2207",
-                            ProjectDescription = "NVVNL Unchahar",
+                            ProjectCode = "NVVNL Unchahar",
+                            ProjectDescription = "2207",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2208,
-                            ProjectCode = "2208",
-                            ProjectDescription = "NVVNL Tanda",
+                            ProjectCode = "NVVNL Tanda",
+                            ProjectDescription = "2208",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2209,
-                            ProjectCode = "2209",
-                            ProjectDescription = "NVVNL Vindhyachal",
+                            ProjectCode = "NVVNL Vindhyachal",
+                            ProjectDescription = "2209",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2210,
-                            ProjectCode = "2210",
-                            ProjectDescription = "NVVNL Korba",
+                            ProjectCode = "NVVNL Korba",
+                            ProjectDescription = "2210",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2211,
-                            ProjectCode = "2211",
-                            ProjectDescription = "NVVNL Sipat",
+                            ProjectCode = "NVVNL Sipat",
+                            ProjectDescription = "2211",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2212,
-                            ProjectCode = "2212",
-                            ProjectDescription = "NVVNL Kahalgaon",
+                            ProjectCode = "NVVNL Kahalgaon",
+                            ProjectDescription = "2212",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2213,
-                            ProjectCode = "2213",
-                            ProjectDescription = "NVVNL Farakka",
+                            ProjectCode = "NVVNL Farakka",
+                            ProjectDescription = "2213",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2214,
-                            ProjectCode = "2214",
-                            ProjectDescription = "NVVNL Talcher (Kaniha)",
+                            ProjectCode = "NVVNL Talcher (Kaniha)",
+                            ProjectDescription = "2214",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2215,
-                            ProjectCode = "2215",
-                            ProjectDescription = "NVVNL Talcher Thermal",
+                            ProjectCode = "NVVNL Talcher Thermal",
+                            ProjectDescription = "2215",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2216,
-                            ProjectCode = "2216",
-                            ProjectDescription = "NVVNL Barh",
+                            ProjectCode = "NVVNL Barh",
+                            ProjectDescription = "2216",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2217,
-                            ProjectCode = "2217",
-                            ProjectDescription = "NVVNL New BongaiGaon",
+                            ProjectCode = "NVVNL New BongaiGaon",
+                            ProjectDescription = "2217",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2601,
-                            ProjectCode = "2601",
-                            ProjectDescription = "Chhatargarh Solar PV Project",
+                            ProjectCode = "Chhatargarh Solar PV Project",
+                            ProjectDescription = "2601",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2602,
-                            ProjectCode = "2602",
-                            ProjectDescription = "Bhainsara Solar PV Project",
+                            ProjectCode = "Bhainsara Solar PV Project",
+                            ProjectDescription = "2602",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 2603,
-                            ProjectCode = "2603",
-                            ProjectDescription = "Amreshwar Solar PV Project",
+                            ProjectCode = "Amreshwar Solar PV Project",
+                            ProjectDescription = "2603",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7120,
-                            ProjectCode = "7120",
-                            ProjectDescription = "NBPPL",
+                            ProjectCode = "NBPPL",
+                            ProjectDescription = "7120",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7130,
-                            ProjectCode = "7130",
-                            ProjectDescription = "TELK",
+                            ProjectCode = "TELK",
+                            ProjectDescription = "7130",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7140,
-                            ProjectCode = "7140",
-                            ProjectDescription = "NPEX",
+                            ProjectCode = "NPEX",
+                            ProjectDescription = "7140",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7150,
-                            ProjectCode = "7150",
-                            ProjectDescription = "BFNSL",
+                            ProjectCode = "BFNSL",
+                            ProjectDescription = "7150",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7160,
-                            ProjectCode = "7160",
-                            ProjectDescription = "EESL",
+                            ProjectCode = "EESL",
+                            ProjectDescription = "7160",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7180,
-                            ProjectCode = "7180",
-                            ProjectDescription = "Adra-JV",
+                            ProjectCode = "Adra-JV",
+                            ProjectDescription = "7180",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7190,
-                            ProjectCode = "7190",
-                            ProjectDescription = "CIL-NTPC",
+                            ProjectCode = "CIL-NTPC",
+                            ProjectDescription = "7190",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7210,
-                            ProjectCode = "7210",
-                            ProjectDescription = "PARPL",
+                            ProjectCode = "PARPL",
+                            ProjectDescription = "7210",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7230,
-                            ProjectCode = "7230",
-                            ProjectDescription = "NTPC EDMC Waste Solutions Priv",
+                            ProjectCode = "NTPC EDMC Waste Solutions Priv",
+                            ProjectDescription = "7230",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7300,
-                            ProjectCode = "7300",
-                            ProjectDescription = "TPCL",
+                            ProjectCode = "TPCL",
+                            ProjectDescription = "7300",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7301,
-                            ProjectCode = "7301",
-                            ProjectDescription = "BIFPC",
+                            ProjectCode = "BIFPC",
+                            ProjectDescription = "7301",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7500,
-                            ProjectCode = "7500",
-                            ProjectDescription = "HURL-HQs",
+                            ProjectCode = "HURL-HQs",
+                            ProjectDescription = "7500",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5010,
-                            ProjectCode = "5010",
-                            ProjectDescription = "NHL",
+                            ProjectCode = "NHL",
+                            ProjectDescription = "5010",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5030,
-                            ProjectCode = "5030",
-                            ProjectDescription = "NVVN",
+                            ProjectCode = "NVVN",
+                            ProjectDescription = "5030",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5040,
-                            ProjectCode = "5040",
-                            ProjectDescription = "NTPC Renewable Energy Limited",
+                            ProjectCode = "NTPC Renewable Energy Limited",
+                            ProjectDescription = "5040",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5050,
-                            ProjectCode = "5050",
-                            ProjectDescription = "NESCL",
+                            ProjectCode = "NESCL",
+                            ProjectDescription = "5050",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5060,
-                            ProjectCode = "5060",
-                            ProjectDescription = "NTPC Foundation",
+                            ProjectCode = "NTPC Foundation",
+                            ProjectDescription = "5060",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5070,
-                            ProjectCode = "5070",
-                            ProjectDescription = "PPDC",
+                            ProjectCode = "PPDC",
+                            ProjectDescription = "5070",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 5080,
-                            ProjectCode = "5080",
-                            ProjectDescription = "BRBCL",
+                            ProjectCode = "BRBCL",
+                            ProjectDescription = "5080",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7070,
-                            ProjectCode = "7070",
-                            ProjectDescription = "Kanti",
+                            ProjectCode = "Kanti",
+                            ProjectDescription = "7070",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7110,
-                            ProjectCode = "7110",
-                            ProjectDescription = "NPGCL",
+                            ProjectCode = "NPGCL",
+                            ProjectDescription = "7110",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 7170,
-                            ProjectCode = "7170",
-                            ProjectDescription = "Patratu",
+                            ProjectCode = "Patratu",
+                            ProjectDescription = "7170",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 404,
-                            ProjectCode = "404",
-                            ProjectDescription = "Talcher Kaniha",
+                            ProjectCode = "Talcher Kaniha",
+                            ProjectDescription = "404",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 405,
-                            ProjectCode = "405",
-                            ProjectDescription = "Talcher Thermal",
+                            ProjectCode = "Talcher Thermal",
+                            ProjectDescription = "405",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 408,
-                            ProjectCode = "408",
-                            ProjectDescription = "Bongaigaon",
+                            ProjectCode = "Bongaigaon",
+                            ProjectDescription = "408",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 410,
-                            ProjectCode = "410",
-                            ProjectDescription = "ER2- HQs",
+                            ProjectCode = "ER2- HQs",
+                            ProjectDescription = "410",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 411,
-                            ProjectCode = "411",
-                            ProjectDescription = "Darlipalli",
+                            ProjectCode = "Darlipalli",
+                            ProjectDescription = "411",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 412,
-                            ProjectCode = "412",
-                            ProjectDescription = "Gajamara",
+                            ProjectCode = "Gajamara",
+                            ProjectDescription = "412",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 431,
-                            ProjectCode = "431",
-                            ProjectDescription = "SSC-ER-2",
+                            ProjectCode = "SSC-ER-2",
+                            ProjectDescription = "431",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 502,
-                            ProjectCode = "502",
-                            ProjectDescription = "Korba",
+                            ProjectCode = "Korba",
+                            ProjectDescription = "502",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 506,
-                            ProjectCode = "506",
-                            ProjectDescription = "Sipat",
+                            ProjectCode = "Sipat",
+                            ProjectDescription = "506",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 510,
-                            ProjectCode = "510",
-                            ProjectDescription = "Lara",
+                            ProjectCode = "Lara",
+                            ProjectDescription = "510",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 511,
-                            ProjectCode = "511",
-                            ProjectDescription = "Khargone",
+                            ProjectCode = "Khargone",
+                            ProjectDescription = "511",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 512,
-                            ProjectCode = "512",
-                            ProjectDescription = "Gadarwara",
+                            ProjectCode = "Gadarwara",
+                            ProjectDescription = "512",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 513,
-                            ProjectCode = "513",
-                            ProjectDescription = "Barethi",
+                            ProjectCode = "Barethi",
+                            ProjectDescription = "513",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 515,
-                            ProjectCode = "515",
-                            ProjectDescription = "Mandsaur Solar",
+                            ProjectCode = "Mandsaur Solar",
+                            ProjectDescription = "515",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 550,
-                            ProjectCode = "550",
-                            ProjectDescription = "WR2- HQs",
+                            ProjectCode = "WR2- HQs",
+                            ProjectDescription = "550",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 551,
-                            ProjectCode = "551",
-                            ProjectDescription = "SSC-WR-2",
+                            ProjectCode = "SSC-WR-2",
+                            ProjectDescription = "551",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 3002,
-                            ProjectCode = "3002",
-                            ProjectDescription = "Rajgarh Solar",
+                            ProjectCode = "Rajgarh Solar",
+                            ProjectDescription = "3002",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 3000,
-                            ProjectCode = "3000",
-                            ProjectDescription = "RE & N- HQs",
+                            ProjectCode = "RE & N- HQs",
+                            ProjectDescription = "3000",
                             TypeId = 1
                         },
                         new
                         {
                             ProjectId = 310,
-                            ProjectCode = "310",
-                            ProjectDescription = "DBF- HQs",
+                            ProjectCode = "DBF- HQs",
+                            ProjectDescription = "310",
                             TypeId = 1
                         });
                 });
@@ -25852,7 +25854,7 @@ namespace dadri_api.Migrations
                         new
                         {
                             RegisterId = 1,
-                            ApprovalDate = new DateTime(2021, 8, 8, 16, 43, 14, 569, DateTimeKind.Local).AddTicks(8435),
+                            ApprovalDate = new DateTime(2021, 8, 8, 16, 36, 13, 475, DateTimeKind.Local).AddTicks(6219),
                             ApprovedBy = "super",
                             Email = "super@ntpc.co.in",
                             EmployerId = 1,
@@ -25861,7 +25863,7 @@ namespace dadri_api.Migrations
                             LastName = "Singh",
                             PhoneNumber = "1234567890",
                             ProjectId = 1011,
-                            RegistratinDate = new DateTime(2021, 8, 8, 16, 43, 14, 571, DateTimeKind.Local).AddTicks(2400)
+                            RegistratinDate = new DateTime(2021, 8, 8, 16, 36, 13, 477, DateTimeKind.Local).AddTicks(241)
                         });
                 });
 

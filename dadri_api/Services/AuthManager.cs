@@ -40,6 +40,7 @@ namespace dadri_api.Services
                 issuer:jwtSetting.GetSection("Issuer").Value,
                 claims:claims,
                 expires: expiration,
+                audience: jwtSetting.GetSection("ValidAudience").Value,
                 signingCredentials:signingCredentials
                 );
             return token;

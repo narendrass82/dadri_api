@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 namespace dadri_api.Data
 {
     public class UserRole
-    {             
-        [ForeignKey(nameof(URole))]
-        public int URoleId { get; set; }
-        [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
-        [ForeignKey(nameof(TypeIndicator))]
+    {  
+        public string RoleId { get; set; }        
+        public string Email { get; set; }        
         public int TypeId { get; set; }
     }
 }
